@@ -39,8 +39,7 @@ const authStates = ({ children }) => {
     }
     useEffect(()=>{
         localStorage.setItem("user",JSON.stringify(user));
-       
-    },[user])
+        },[user])
     
     return <Authcontext.Provider value={{ login, user,  logout ,err}} >{children}</Authcontext.Provider>
 }
