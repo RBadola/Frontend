@@ -50,7 +50,7 @@ const Register = () => {
 
 
   return (
-    <div className="flex flex-col items-center justify-center w-full md:h-full">
+    <div className="flex flex-col items-center justify-center md:h-screen w-full ">
 
       <div className="   mt-1  min-w-4/5 md:w-1/4 flex flex-col border p-3 relative shadow-[5px_10px_0_0px] shadow-slate-600">
         <p className="absolute top-0 -translate-y-6 p-1 bg-[#252525] text-2xl leading-7 ">
