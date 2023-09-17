@@ -8,7 +8,7 @@ const authStates = ({ children }) => {
     const [err, seterr] = useState(null )
     const login = async (inputs) => {
         try {
-            const res = await axios.post('http://localhost:8090/api/authRoutes/login/', inputs,{withCredentials: true, credentials: 'include'})
+            const res = await axios.post('https://codsoft-backend.onrender.com/api/authRoutes/login/', inputs,{withCredentials: true, credentials: 'include'})
             setuser(res.data.user);
             seterr("")
             return true
@@ -28,7 +28,7 @@ const authStates = ({ children }) => {
     }
     const logout = async () => {
         try {
-            await axios.post('http://localhost:8090/api/authRoutes/logout/',{ },{withCredentials: true, credentials: 'include'})
+            await axios.post('https://codsoft-backend.onrender.com/api/authRoutes/logout/',{ },{withCredentials: true, credentials: 'include'})
             setuser(null)
             localStorage.removeItem("user")
             return true

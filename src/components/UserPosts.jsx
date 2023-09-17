@@ -9,7 +9,7 @@ const UserPosts = (props) => {
     const nav = useNavigate()
     const fetchBlogs = async () => {
         try {
-            const res = await axios.post('http://localhost:8090/api/loggedUser/myposts/', {}, { withCredentials: true, credentials: 'same-origin' })
+            const res = await axios.post('https://codsoft-backend.onrender.com/api/loggedUser/myposts/', {}, { withCredentials: true, credentials: 'same-origin' })
             setBlogs(res.data.posts)
             props.blogL(res.data.posts)
         } catch (err2) {
@@ -25,7 +25,7 @@ const UserPosts = (props) => {
     const deleteBlog = async (id) => {
 
         try {
-            const res = await axios.post(`http://localhost:8090/api/loggedUser/deletePost/${id}`, {}, { withCredentials: true, credentials: 'same-origin' })
+            const res = await axios.post(`https://codsoft-backend.onrender.com/api/loggedUser/deletePost/${id}`, {}, { withCredentials: true, credentials: 'same-origin' })
             fetchBlogs()
             seterr(res.data)
         } catch (err2) {

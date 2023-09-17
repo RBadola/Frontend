@@ -16,7 +16,7 @@ const Comments = ({ blogid, }) => {
       comment: value.comment,
       blogid: blogid
     }
-    await axios.post('http://localhost:8090/api/loggedUser/addComment/', comment, { withCredentials: true, credentials: 'same-origin' })
+    await axios.post('https://codsoft-backend.onrender.com/api/loggedUser/addComment/', comment, { withCredentials: true, credentials: 'same-origin' })
     .then(() => {
       fetchComments();
       setvalue({comment:""}) 
@@ -24,7 +24,7 @@ const Comments = ({ blogid, }) => {
   }
   const fetchComments = async () => {
     try {
-      const res = await axios.get(`http://localhost:8090/api/blogRoutes/getComments/${blogid}`)
+      const res = await axios.get(`https://codsoft-backend.onrender.com/api/blogRoutes/getComments/${blogid}`)
       setcomments(res.data)
     } catch (errr) {
       console.log(errr)

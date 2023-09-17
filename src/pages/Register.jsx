@@ -25,7 +25,7 @@ const Register = () => {
     }
     try {
       // console.log(user)
-      const res = await axios.post("http://localhost:8090/api/authRoutes/register/", user);
+      const res = await axios.post("https://codsoft-backend.onrender.com/api/authRoutes/register/", user);
       // console.log(res.data.message);
       nav('/login')
     } catch (errr) {

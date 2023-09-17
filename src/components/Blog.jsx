@@ -11,7 +11,7 @@ const Blog = () => {
   const [blog, setBlog] = useState({})
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get(`http://localhost:8090/api/blogRoutes/blog/${id}`)
+      const res = await axios.get(`https://codsoft-backend.onrender.com/api/blogRoutes/blog/${id}`)
       setBlog(res.data)
     } catch (errr) {
       console.log(errr)

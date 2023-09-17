@@ -27,7 +27,7 @@ const NewBlog = () => {
       "body": inputs.body,
       }
     await axios.post(
-      "http://localhost:8090/api/loggedUser/createBlog",
+      "https://codsoft-backend.onrender.com/api/loggedUser/createBlog",
       formData,{
         withCredentials: true, credentials: 'same-origin'}
     )

@@ -10,7 +10,7 @@ const Home = () => {
 
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get('http://localhost:8090/api/blogRoutes/blog/')
+      const res = await axios.get('https://codsoft-backend.onrender.com/api/blogRoutes/blog/')
       setBlogs(res.data)
     } catch (errr) {
       console.log(errr)

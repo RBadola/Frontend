@@ -7,7 +7,7 @@ const Search = () => {
   const [results, setResults] = useState([])
   const nav = useNavigate()
   const fetchSearchResults = async (value) => {
-    await axios.post('http://localhost:8090/api/blogRoutes/search/', { keyword: value }).then((res) => {
+    await axios.post('https://codsoft-backend.onrender.com/api/blogRoutes/search/', { keyword: value }).then((res) => {
       const blogs = res.data.filter((doc) => {
         const title = doc.title.toLowerCase()
         return title.includes(value)

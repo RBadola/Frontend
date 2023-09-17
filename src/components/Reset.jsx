@@ -11,7 +11,7 @@ const Reset = (props) => {
       }
     const resethandler = async (e) => {
         e.preventDefault();
-        await axios.put("http://localhost:8090/api/authRoutes/resetPass/", pass, {
+        await axios.put("https://codsoft-backend.onrender.com/api/authRoutes/resetPass/", pass, {
           withCredentials: true, credentials: 'include'}).then(
           props.setmodal(!props.modal)
         ).catch((err) => console.log(err.response.data))
