@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar,
+.horScroll::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+body::-webkit-scrollbar-track,
+.horScroll::-webkit-scrollbar-track {
+  background-color: #655555;
+  border-radius: 15px;
+  margin: 0.5em;
+}
+body::-webkit-scrollbar-thumb,
+.horScroll::-webkit-scrollbar-thumb {
+  background-color: aquamarine;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+@layer base{
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #252525;
+  position: relative;
+}
+[data-tooltip] {
+  position: relative;
+  display: inline-block;
+}
+[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  min-width: max-content;
+  border: 2px solid white;
+  background: #252525;
+  visibility: hidden;
+  border-radius: 10px;
+  color: whitesmoke;
+  text-align: center;
+  padding: 3px;
+}
+.tooltip:hover > [data-tooltip]::before {
+  visibility: visible;
+}
+
+h1{
+  @apply text-4xl;
+}
+h2{
+  @apply text-3xl;
+}
+h3{
+  @apply text-2xl;
+}
+h4{
+  @apply text-xl;
+}
+h5{
+  @apply text-base;
+}
+h6{
+  @apply text-sm;
+}
+strong,b{
+  @apply font-bold;
+}
+em,i{
+  @apply italic;
+}
+u{
+  @apply underline;
+}
+code{
+  @apply break-words text-clip bg-slate-800 text-blue-100  my-2 mx-1 w-full p-1 ;
+}
+pre{
+  @apply break-words text-clip bg-slate-800 text-blue-100  my-2 mx-1 w-full pt-3 py-3 pb-1;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 87.5%;
+  overflow: auto;
+}
+blockquote{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  border-left: .25rem solid #91989bf2;
+}
+hr{
+  @apply my-1 px-1 h-[2px] bg-black w-full;
+}
+a{
+  @apply cursor-pointer text-blue-600 hover:underline text-inherit;
+
+}
+s{
+  @apply line-through;
+}
+
+input:focus{
+  outline: none
+}
+
+}
+
+@layer components{
+  .blog{
+    @apply px-2 py-3  rounded-lg text-white  grid place-items-center h-full  overflow-hidden w-full;
+  }
+   .user-detail {
+    @apply flex justify-start w-full space-x-3 items-center p-1;
+  }
+  .tags{
+    @apply flex   bg-teal-600 text-white items-center justify-center px-1 mx-1 mb-1 tracking-wide  font-semibold rounded-sm;
+  }
+
+}
+@layer utilities{
+  .input{
+    @apply bg-transparent outline-none border-b-2 rounded-sm p-1 md:p-2 mr-2 md:mr-4 border-cyan-500 focus-within:bg-slate-400 focus-within:text-yellow-100;    
+  }
+}
