@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  @apply transition delay-75;
 }
 body::-webkit-scrollbar,
 .horScroll::-webkit-scrollbar {
@@ -119,7 +120,7 @@ input:focus{
 
 @layer components{
   .blog{
-    @apply px-2 py-3  rounded-lg text-white  grid place-items-center h-full  overflow-hidden w-full;
+    @apply px-2 py-3  rounded-lg text-white  grid place-items-center h-full  overflow-hidden ;
   }
    .user-detail {
     @apply flex justify-start w-full space-x-3 items-center p-1;

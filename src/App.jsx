@@ -8,7 +8,7 @@ import NewBlog from './components/NewBlog'
 import Blog from './components/Blog'
 import Account from './components/Account'
 import {
-  RouterProvider, createBrowserRouter, Outlet
+  RouterProvider, createBrowserRouter, Outlet, useNavigate
 } from 'react-router-dom'
 import { Authcontext } from './context/Authcontext'
 import UserPosts from './components/UserPosts'
@@ -50,16 +50,17 @@ function App() {
         {
           path: '/my-posts', //working
           element:user?  <UserPosts />:<Login/>
+        },
+        {
+          path: '/login',
+          element:user?<Home/>: <Login/>
+        }, {
+          path: 'register',
+          element:user?<Home/>: <Register />
         }
       ]
     },
-    {
-      path: '/login',
-      element: <Login/>
-    }, {
-      path: 'register',
-      element: <Register />
-    }
+    
 
   ])
 

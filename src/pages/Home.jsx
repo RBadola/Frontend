@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Allblogs from "../components/Allblogs";
 
 const Home = () => {
   const [err, seterr] = useState(null);
-  const nav = useNavigate();
   const [BLOGS, setBlogs] = useState([])
 
   const fetchBlogs = async () => {
@@ -13,7 +11,7 @@ const Home = () => {
       const res = await axios.get('https://codsoft-backend.onrender.com/api/blogRoutes/blog/')
       setBlogs(res.data)
     } catch (errr) {
-      console.log(errr)
+      seterr(errr)
     }
   }
   useEffect(() => {
@@ -26,7 +24,6 @@ const Home = () => {
         <Allblogs BLOGS={BLOGS} />
 
       </div>
-
 
     </div >
   )

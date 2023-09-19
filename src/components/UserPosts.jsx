@@ -44,15 +44,15 @@ const UserPosts = (props) => {
                 BLOGS?.map((blog) => {
 
                         return (
-                            <div className='px-3 py-2 md:p-6  rounded-lg   bg-cyan-500 text-white shadow-md  shadow-white flex flex-col md:flex-row ' key={blog?._id}>
+                            <div className='px-3 py-2 md:p-6  rounded-lg   bg-cyan-700 text-white shadow-md  shadow-white flex flex-col md:flex-row ' key={blog?._id}>
 
                                 <div className='ml-2 w-full'>
                                     <div>
-                                        <span>{blog?.createdAt?.split("T")[0]}</span>
+                                        <p className='font-extrabold max-w-2xl leading-6 text-2xl mb-1'>{blog?.title}</p>
                                     </div>
                                     <div className='h-full'>
-                                        <p className='font-extrabold max-w-2xl leading-6 text-2xl mb-1'>{blog?.title}</p>
-                                        <div className=' overflow-auto bg-slate-300 rounded-sm max-w-2xl text-gray-600 p-2 mr-2 text-clip break-words'>
+                                        <span>{blog?.createdAt?.split("T")[0]}</span>
+                                        <div className=' overflow-auto bg-slate-200 rounded-sm max-w-2xl text-gray-700 p-2 mr-2 text-clip break-words'>
                                             <ReactMarkdown className='w-full'>
                                                 {blog?.body}
                                             </ReactMarkdown>

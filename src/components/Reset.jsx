@@ -6,6 +6,7 @@ const Reset = (props) => {
         oldPassword: "",
         newPassword: ""
       })
+  const [err,seterr]=useState(null)
       const changeHandler = (e) => {
         setPass((prev) => ({ ...prev, [e.target.name]: e.target.value }))
       }
@@ -14,7 +15,7 @@ const Reset = (props) => {
         await axios.put("https://codsoft-backend.onrender.com/api/authRoutes/resetPass/", pass, {
           withCredentials: true, credentials: 'include'}).then(
           props.setmodal(!props.modal)
-        ).catch((err) => console.log(err.response.data))
+        ).catch((err) => seterr(err.response.data))
       }
   return (
     <div className='fixed top-0 z-50 w-full h-screen grid place-items-center place-content-center translate-x-1/2  right-1/2  backdrop-blur-sm'>

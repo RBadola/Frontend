@@ -5,20 +5,20 @@ const Allblogs = ({ BLOGS }) => {
 
         BLOGS.map((blog) => {
             return (
-                <div className='px-2 py-3  rounded-lg bg-cyan-500 text-white shadow-md shadow-orange-500 grid place-items-center' key={blog._id} >
+                <div className='group px-2 py-3  rounded-lg bg-cyan-700 text-white shadow-md hover:shadow-[0_0_0_2px_white]  grid place-items-center w-full' key={blog._id} >
 
-                    <div className='self-center'>
-                        <p className='font-extrabold'>{blog.title}</p>
-                        <p>{blog.createdAt?.split("T")[0]}</p>
+                    <div className='place-self-center'>
+                        <p className='font-extrabold md:text-xl'>{blog.title}</p>
+                        <p className='font-thin text-sm'>{blog.createdAt?.split("T")[0]}</p>
                     </div>
 
-                    <p className='p-3'>
+                    <p className=' place-self-start'>
                         {blog.body.slice(0,50)+ "..."}
                     </p>
-                    <p>by {blog.author.name}</p>
+                    <p className='m-1'>by <span className='font-semibold capitalize self-start'>{blog.author.name}</span> </p>
                     <Link to={`/blog/${blog._id}`}>
                         <button
-                            className="bg-red-400 p-1 rounded tracking-wider "
+                            className="bg-red-400 p-1 rounded tracking-wider group-hover:bg-red-600 hover:bg-red-600"
                         >
                             Read More..
                         </button>

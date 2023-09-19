@@ -7,6 +7,7 @@ import axios from "axios";
 import Comments from "./Comments";
 
 const Blog = () => {
+  const [err,seterr]=useState(null)
   const {id} = useParams()
   const [blog, setBlog] = useState({})
   const fetchBlogs = async () => {
@@ -14,7 +15,7 @@ const Blog = () => {
       const res = await axios.get(`https://codsoft-backend.onrender.com/api/blogRoutes/blog/${id}`)
       setBlog(res.data)
     } catch (errr) {
-      console.log(errr)
+      seterr(errr)
     }
   }
    
@@ -25,7 +26,7 @@ const Blog = () => {
   return (
     <div className="blog ">
 
-      <div className="mt-1 grid place-items-center min-w-[4xl]">
+      <div className="mt-1 grid place-items-center lg:w-3/4 ">
 
         <div className="user-detail">
 
@@ -34,7 +35,7 @@ const Blog = () => {
             <span>{blog.createdAt?.split("T")[0]}</span>
           </div>
         </div>
-        <div className="max-w-4xl  ">
+        <div className="w-full ">
           <p className="font-extrabold text-4xl mb-1 leading-loose">
             {blog.title}
           </p>

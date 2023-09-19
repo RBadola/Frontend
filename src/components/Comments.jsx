@@ -6,6 +6,7 @@ const Comments = ({ blogid, }) => {
   const [value, setvalue] = useState({
     comment: "",
   })
+  const [err,seterr]=useState(null)
   const [comments, setcomments] = useState([])
   const changeHandler = (e) => {
     setvalue({ [e.target.name]: e.target.value })
@@ -27,7 +28,7 @@ const Comments = ({ blogid, }) => {
       const res = await axios.get(`https://codsoft-backend.onrender.com/api/blogRoutes/getComments/${blogid}`)
       setcomments(res.data)
     } catch (errr) {
-      console.log(errr)
+      seterr(errr)
     }
   }
   useEffect(() => {
