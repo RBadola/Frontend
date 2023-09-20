@@ -48,9 +48,9 @@ const Register = () => {
 
 
   return (
-    <div className="flex flex-col items-center justify-center mt-28 w-full ">
+    <div className="flex  items-center justify-center h-[400px] w-screen ">
 
-      <div className="   mt-1  min-w-4/5 md:w-1/4 flex flex-col border p-3 relative shadow-[5px_10px_0_0px] shadow-slate-600">
+      <div className="   mt-1   md:w-1/4 flex flex-col border p-3 relative shadow-[5px_10px_0_0px] shadow-slate-600">
         <p className="absolute top-0 -translate-y-6 p-1 bg-[#252525] text-2xl leading-7 ">
           Register
         </p>

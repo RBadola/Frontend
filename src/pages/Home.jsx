@@ -8,7 +8,7 @@ const Home = () => {
 
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get('https://codsoft-backend.onrender.com/api/blogRoutes/blog/',{withCredentials:true,credentials: 'same-origin'})
+      const res = await axios.get('https://codsoft-backend.onrender.com/api/blogRoutes/blog/')
       setBlogs(res.data)
     } catch (errr) {
       seterr(errr)

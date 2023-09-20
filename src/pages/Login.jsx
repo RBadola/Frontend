@@ -24,7 +24,7 @@ const Login = () => {
         } 
     }
     return (
-        <div className='fixed top-0  flex  items-center justify-center mt-28 md:h-screen w-full'>
+        <div className=' flex  items-center justify-center  h-[400px] w-full'>
             <form className='flex flex-col border p-3 w-4/5 md:w-1/4   justify-center  relative shadow-[5px_10px_0_0px] shadow-slate-600'>
 
                 <p className=' bg-[#252525] text-white text-2xl -top-[14px] absolute '>LOGIN</p>
