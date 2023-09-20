@@ -120,7 +120,7 @@ input:focus{
 
 @layer components{
   .blog{
-    @apply px-2 py-3  rounded-lg text-white  grid place-items-center h-full  overflow-hidden ;
+    @apply  px-5 md:px-2 py-3  rounded-lg text-white  grid place-items-center h-full  overflow-hidden ;
   }
    .user-detail {
     @apply flex justify-start w-full space-x-3 items-center p-1;

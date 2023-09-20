@@ -36,7 +36,7 @@ const Blog = () => {
           </div>
         </div>
         <div className="w-full ">
-          <p className="font-extrabold text-4xl mb-1 leading-loose">
+          <p className="font-extrabold text-2xl md:text-4xl mb-1 md:leading-loose">
             {blog.title}
           </p>
           <div className="bg-white text-black p-2" >
