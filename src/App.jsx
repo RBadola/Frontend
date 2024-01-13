@@ -16,7 +16,8 @@ import UserPosts from './components/UserPosts'
 function App() {
   const { user } = useContext(Authcontext);
   const Layout = () => {
-    return (<div className='relative' >
+    return (
+    <div className='relative' >
       <Navbar  />
       <Outlet />
     </div>)

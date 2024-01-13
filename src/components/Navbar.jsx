@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-around items-center gap-x-1 md:gap-x-4 h-18 md:h-24  md:sticky mt-1 md:top-0 z-50 w-full px-2 md:px-4 backdrop-blur-md">
       <p className="md:w-full text-lg md:text-3xl font-extrabold text-white hover:no-underline">
-        <Link to="/home" className="hover:no-underline hover:drop-shadow-[7px_7px_0_purple] " >WriteON</Link>
+        <Link to="/home" className="hover:no-underline hover:drop-shadow-[7px_7px_0_purple]" >WriteON</Link>
       </p>
       <Search/>
       {user ? (

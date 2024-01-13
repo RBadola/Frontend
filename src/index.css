@@ -81,10 +81,10 @@ u{
   @apply underline;
 }
 code{
-  @apply break-words text-clip bg-slate-800 text-blue-100  my-2 mx-1 w-full p-1 ;
+  @apply break-words text-clip bg-slate-800 text-blue-100 px-1 my-2 mx-1 w-full p-1 ;
 }
 pre{
-  @apply break-words text-clip bg-slate-800 text-blue-100  my-2 mx-1 w-full pt-3 py-3 pb-1;
+  @apply break-words text-clip bg-slate-800 text-blue-100  my-2 mx-1 w-full pt-3 px-2 pb-1;
   margin-bottom: 20px;
   display: block;
   font-size: 87.5%;

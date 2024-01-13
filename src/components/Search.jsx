@@ -54,7 +54,7 @@ const Search = () => {
         placeholder="Search Here"
         onChange={handleChange}
       />
-      <div className='absolute z-50 bg-black text-white  rounded-sm top-14 w-full md:w-80 '>
+      <div className='absolute z-50 bg-cyan-700  drop-shadow-md  rounded-sm top-14 w-full md:w-80 '>
         {
         results.map((res) =><p  key={res._id} className='p-1 m-1 z-50 text-sm  hover:bg-white hover:text-gray-700 cursor-pointer' onClick={()=>redirect(res._id)} > {res.title}</p>)
         }
