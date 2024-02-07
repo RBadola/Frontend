@@ -9,7 +9,7 @@ const [loading, setloading] = useState(false)
   const fetchBlogs = async () => {
     try {
       setloading(true)
-      const res = await axios.get('https://codsoft-backend.onrender.com/api/blogRoutes/blog/')
+      const res = await axios.get('https://codsoft-backend.onrender.com/api/blogRoutes/blog/',{},{ withCredentials: true, credentials: 'same-origin' })
       setBlogs(res.data)
       setloading(false)
     } catch (errr) {
