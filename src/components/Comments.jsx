@@ -22,6 +22,9 @@ const Comments = ({ blogid, }) => {
       comment: value.comment,
       blogid: blogid
     }
+    if(value.comment === ""){
+      return new Error("comment can not be empty")
+    }
     await axios.post('https://codsoft-backend.onrender.com/api/loggedUser/addComment/', comment, { withCredentials: true, credentials: 'same-origin' })
       .then(() => {
         fetchComments();
