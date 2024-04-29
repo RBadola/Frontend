@@ -28,8 +28,7 @@ const NewBlog = () => {
       }
     await axios.post(
       "https://codsoft-backend.onrender.com/api/loggedUser/createBlog",
-      formData,{
-        withCredentials: true, credentials: 'same-origin'}
+      formData,{withCredentials: true, credentials: 'include'}
     )
       .then(() => nav('/home'))
       .catch((err) => {

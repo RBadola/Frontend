@@ -49,7 +49,8 @@ const UserPosts = (props) => {
                                 <div className='flex w-full'>
                                     <p className='font-bold md:font-extrabold w max-w-2xl leading-6 text-xl md:text-2xl mb-1'>{blog?.title}</p>
                                     <button className='bg-red-400 p-1 m-1 rounded self-center ' onClick={() => deleteBlog(blog?._id)} ><MdDelete /></button>
-
+                                    <button>View</button>
+                                    <button>Edit</button>
                                 </div>
                                 <div className='max-h-80'>
                                     <span>{blog?.createdAt?.split("T")[0]}</span>
